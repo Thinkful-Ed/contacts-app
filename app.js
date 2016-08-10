@@ -43,14 +43,7 @@ function watchForNewContact() {
 }
 
 
-function watchForContactDeletion() {
-	$('.js-my-contacts').on('click', '.js-delete-contact', function(event) {
-		$(event.currentTarget).closest('.contact').remove();
-	})
-}
-
 $(function() {
 	loadContactsData();
 	watchForNewContact();
-	watchForContactDeletion();
 });
