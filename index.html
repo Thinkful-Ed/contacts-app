@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thinkful | Contacts App Example</title>
+	<meta charset="utf-8">
+	<meta name="description" value="Exemplary solution for Contacts App challenge from Thinkful's Front End Web Development course">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<main>
+		<h1>Contacts app</h1>
+
+		<section>
+			<h3>Add a contact</h3>
+			<form class="js-add-contact" action="#">
+				<div class="form-row">
+					<label for="form-first-name">First name</label>
+					<input type="text" name="form-first-name" id="form-first-name" placeholder="Juan" required>
+				</div>
+				<div class="form-row">
+					<label for="form-last-name">Last name</label>
+					<input type="text" name="form-last-name" id="form-last-name" placeholder="Doe" required>
+				</div>
+				<div class="form-row">
+					<label for="form-phone">Phone</label>
+					<input type="text" name="form-phone" id="form-phone" placeholder="555-555-5555">
+				</div>
+				<div class="form-row">
+					<label for="form-street">Street</label>
+					<input type="text" name="form-street" id="form-street" placeholder="678 Road St" required>
+				</div>
+				<div class="form-row">
+					<label for="form-street">State</label>
+					<input type="text" name="form-street" id="form-street" placeholder="NY" required>
+				</div>
+				<div class="form-row">
+					<label for="form-zip">Zip</label>
+					<input type="text" name="form-zip" id="form-zip" placeholder="12345" required>
+				</div>
+
+				<input type="submit" value="Add contact">
+			</form>
+		<section>
+			<h3>My contacts</h3>
+			<div class="js-my-contacts"></div>
+		</section>
+	</main>
+
+	<!-- inline styling this because it should never be viewable to anyone except our JS, which clones elements below as mini-templates for questions and answers -->
+	<div class="js-templates" style="display: none">
+
+		<div id="js-contact-template">
+			<div class="contact">
+				<h3>
+					<span class="js-contact-first-name"></span>
+					<span class="js-contact-last-name"></span>
+				</h3>
+				<dl class="contact-info">
+
+					<dt>First name</dt>
+					<dd class="js-contact-first-name"></dd>
+
+					<dt>Last name</dt>
+					<dd class="js-contact-last-name"></dd>
+
+					<dt>Address</dt>
+					<dd class="contact-address">
+						<p class="js-contact-street"></p>
+						<p>
+							<span class="js-contact-city"></span>,&nbsp;
+							<span class="js-contact-state"></span>&nbsp;
+							<span class="js-contact-zip"></span>
+						</p>
+					</dd>
+
+					<dt>Phone</dt>
+					<dd class="js-contact-phone"></dd>
+				</dl>
+				<button class="js-delete-contact">Delete</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

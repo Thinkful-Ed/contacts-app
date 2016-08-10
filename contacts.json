@@ -1,0 +1,22 @@
+{
+	"contacts": [
+		{
+			"firstName": "John",
+			"lastName": "Doe",
+			"phoneNumber": "555-555-5555",
+			"street": "123 Main Street",
+			"city": "Medium City",
+			"state": "OH",
+			"zipCode": "12345"
+		},
+		{
+			"firstName": "Jane",
+			"lastName": "Doe",
+			"phoneNumber": "555-333-3333",
+			"street": "321 Center Street",
+			"city": "Western City",
+			"state": "CA",
+			"zipCode": "54321"
+		}
+	]
+}
